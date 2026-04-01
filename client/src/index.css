@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 20% 8%;
+    --foreground: 210 20% 92%;
+    --card: 222 18% 11%;
+    --card-foreground: 210 20% 92%;
+    --popover: 222 18% 11%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 43 85% 52%;
+    --primary-foreground: 222 20% 8%;
+    --secondary: 222 14% 18%;
+    --secondary-foreground: 210 15% 75%;
+    --muted: 222 14% 15%;
+    --muted-foreground: 210 10% 55%;
+    --accent: 43 85% 52%;
+    --accent-foreground: 222 20% 8%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 14% 20%;
+    --input: 222 14% 18%;
+    --ring: 43 85% 52%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; box-sizing: border-box; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+  #root { height: 100%; }
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 2px; }
+
+.impact-high  { background: hsl(14 90% 58% / 0.15); color: hsl(14 90% 65%);  border: 1px solid hsl(14 90% 58% / 0.3); }
+.impact-medium{ background: hsl(43 85% 52% / 0.15); color: hsl(43 85% 62%);  border: 1px solid hsl(43 85% 52% / 0.3); }
+.impact-low   { background: hsl(148 60% 44% / 0.15); color: hsl(148 60% 55%); border: 1px solid hsl(148 60% 44% / 0.3); }
+.impact-pending{ background: hsl(200 70% 55% / 0.15); color: hsl(200 70% 65%); border: 1px solid hsl(200 70% 55% / 0.3); }
+
+.urgency-immediate{ background: hsl(14 90% 58% / 0.15); color: hsl(14 90% 65%);  border: 1px solid hsl(14 90% 58% / 0.3); }
+.urgency-near_term{ background: hsl(43 85% 52% / 0.15); color: hsl(43 85% 62%);  border: 1px solid hsl(43 85% 52% / 0.3); }
+.urgency-long_term{ background: hsl(148 60% 44% / 0.15); color: hsl(148 60% 55%); border: 1px solid hsl(148 60% 44% / 0.3); }
+
+.cat-tort_reform    { background: hsl(280 50% 55% / 0.15); color: hsl(280 50% 70%); border: 1px solid hsl(280 50% 55% / 0.3); }
+.cat-zoning         { background: hsl(200 70% 50% / 0.15); color: hsl(200 70% 65%); border: 1px solid hsl(200 70% 50% / 0.3); }
+.cat-tax_incentive  { background: hsl(43 85% 52% / 0.15);  color: hsl(43 85% 62%);  border: 1px solid hsl(43 85% 52% / 0.3); }
+.cat-opportunity_zone{ background: hsl(148 60% 44% / 0.15); color: hsl(148 60% 55%); border: 1px solid hsl(148 60% 44% / 0.3); }
+.cat-housing        { background: hsl(14 80% 55% / 0.15);  color: hsl(14 80% 65%);  border: 1px solid hsl(14 80% 55% / 0.3); }
+.cat-environmental  { background: hsl(100 60% 44% / 0.15); color: hsl(100 60% 55%); border: 1px solid hsl(100 60% 44% / 0.3); }
+.cat-infrastructure { background: hsl(220 60% 55% / 0.15); color: hsl(220 60% 65%); border: 1px solid hsl(220 60% 55% / 0.3); }
+
+.policy-card { transition: border-color 150ms ease, background 150ms ease; }
+.policy-card:hover { border-color: hsl(43 85% 52% / 0.4); background: hsl(222 18% 13%); }
+.kpi-card { background: linear-gradient(135deg, hsl(222 18% 11%), hsl(222 16% 13%)); }
+.ga-header-bar { background: hsl(222 20% 8%); border-bottom: 1px solid hsl(43 85% 52% / 0.2); }

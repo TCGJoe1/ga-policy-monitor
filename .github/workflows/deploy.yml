@@ -27,11 +27,11 @@ jobs:
 
       - run: npm install
 
-      - run: npx vite build --outDir client/dist/public
+      - run: npx vite build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: client/dist/public
+          path: dist/public
 
   deploy:
     needs: build

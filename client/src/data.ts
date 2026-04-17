@@ -397,3 +397,126 @@ export const OPPORTUNITIES: Opportunity[] = [
 ];
 
 export const LAST_UPDATED = "April 1, 2026";
+
+export interface ChangelogEntry {
+  date: string;
+  changes: {
+    type: "policy" | "opportunity" | "site";
+    title: string;
+    description: string;
+    policyId?: number;
+  }[];
+}
+
+export const CHANGELOG: ChangelogEntry[] = [
+  {
+    date: "April 1, 2026",
+    changes: [
+      {
+        type: "policy",
+        title: "Added: Savannah Workforce Housing Initiative (HB 399)",
+        description: "New policy tracking HB 399 — a $50M state workforce housing grant program targeting developments near Savannah's port and logistics corridor.",
+        policyId: 10,
+      },
+      {
+        type: "opportunity",
+        title: "New Opportunity: Savannah Port Logistics Housing",
+        description: "Workforce housing grant reduces developer cost basis alongside density bonuses for multifamily and mixed-use projects near the port.",
+      },
+    ],
+  },
+  {
+    date: "March 15, 2026",
+    changes: [
+      {
+        type: "policy",
+        title: "Added: Georgia Broadband Deployment Act",
+        description: "Tracks SB 332 streamlining broadband infrastructure permitting on commercial properties, reducing approval timelines from 90 to 30 days.",
+        policyId: 9,
+      },
+      {
+        type: "opportunity",
+        title: "New Opportunity: Industrial & Flex Broadband Retrofit",
+        description: "Properties near broadband deployment corridors can command premium rents; retrofit costs are now partially offset by state easement grants.",
+      },
+    ],
+  },
+  {
+    date: "February 28, 2026",
+    changes: [
+      {
+        type: "policy",
+        title: "Updated: Chatham County Unified Zoning Ordinance",
+        description: "Zoning ordinance update expanded to include new mixed-use overlay districts in the downtown Savannah core and Midtown corridors.",
+        policyId: 4,
+      },
+      {
+        type: "site",
+        title: "Added Deal Opportunities view",
+        description: "New Opportunities page surfaces actionable CRE deal angles tied directly to each tracked policy, sortable by urgency and geography.",
+      },
+    ],
+  },
+  {
+    date: "January 10, 2026",
+    changes: [
+      {
+        type: "policy",
+        title: "Added: Georgia Opportunity Zone Re-Certification (HB 111)",
+        description: "Tracks federal QOZ re-certification for 47 Georgia census tracts through 2028, with state-level tax credit stacking now permitted.",
+        policyId: 6,
+      },
+      {
+        type: "policy",
+        title: "Added: Georgia Electric Vehicle Infrastructure Act (SB 219)",
+        description: "EV charging infrastructure now eligible for 30% state tax credit on commercial properties; applies to parking structures and retail centers.",
+        policyId: 7,
+      },
+    ],
+  },
+  {
+    date: "December 1, 2025",
+    changes: [
+      {
+        type: "policy",
+        title: "Added: Chatham County Short-Term Rental Cap (Ord. 2025-44)",
+        description: "Chatham County caps new STR licenses at 1,500 units countywide, creating upward pressure on long-term rental and multifamily demand.",
+        policyId: 5,
+      },
+      {
+        type: "policy",
+        title: "Added: Georgia Commercial Property Assessed Clean Energy (C-PACE)",
+        description: "C-PACE financing now available statewide for energy efficiency and renewable upgrades on commercial properties.",
+        policyId: 8,
+      },
+    ],
+  },
+  {
+    date: "April 21, 2025",
+    changes: [
+      {
+        type: "policy",
+        title: "Added: Georgia Tort Reform — SB 68 & SB 69",
+        description: "Governor Kemp signed sweeping premises liability reform raising the legal threshold for property owner liability. High-impact for CRE insurance and investment underwriting.",
+        policyId: 1,
+      },
+      {
+        type: "policy",
+        title: "Added: Georgia Zoning Reform — HB 894",
+        description: "Statewide zoning reform preempts local single-family-only zoning to allow duplexes by-right near transit corridors.",
+        policyId: 2,
+      },
+      {
+        type: "policy",
+        title: "Added: Atlanta Beltline TAD Extension",
+        description: "Tax Allocation District extended through 2035, unlocking $200M in additional infrastructure bonds along the Beltline corridor.",
+        policyId: 3,
+      },
+      {
+        type: "site",
+        title: "Georgia CRE Policy Monitor launched",
+        description: "Initial launch tracking 10 active Georgia policies with CRE implications across tort reform, zoning, tax incentives, opportunity zones, and housing.",
+      },
+    ],
+  },
+];

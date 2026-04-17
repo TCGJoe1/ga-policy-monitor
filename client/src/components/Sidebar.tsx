@@ -1,9 +1,10 @@
 import { Link, useLocation } from "wouter";
-import { LayoutDashboard, Zap } from "lucide-react";
+import { LayoutDashboard, Zap, Sparkles } from "lucide-react";
 
 const NAV = [
   { href: "/", label: "Policy Feed", icon: LayoutDashboard },
   { href: "/opportunities", label: "Opportunities", icon: Zap },
+  { href: "/whats-new", label: "What's New", icon: Sparkles },
 ];
 
 const CATEGORIES = [
